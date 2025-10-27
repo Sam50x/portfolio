@@ -1,11 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-    --color-text: #D8E3F4;
-    --color-background: #020509;
-    --color-accent: #D36B5C;
-    --color-primary: #8BAFE0;
-    --color-secondary: #7F2251;
-    --color-cards-dark: #0E1825;
-    --color-cards-dark-inactive: #0F1317;
+  --font-gugi: gugi, Helvetica, sans-serif;
+
+  --color-text: #d8e3f4;
+  --color-background: #020509;
+  --color-accent: #d36b5c;
+  --color-primary: #8bafe0;
+  --color-secondary: #7f2251;
+  --color-cards-dark: #0e1825;
+  --color-cards-dark-inactive: #0f1317;
+}
+
+@font-face {
+  font-family: gugi;
+  src: url("./assets/fonts/Gugi-Regular.ttf");
 }
