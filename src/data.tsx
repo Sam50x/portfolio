@@ -35,12 +35,4 @@ export const projects: Project[] = [
         github_link: '',
         live_demo_link: '',
     },
-    {
-        title: 'project 1',
-        description: 'description 1',
-        date: 'July 2025',
-        icon: <img src={lenzezProjectIcon} alt="project 1" />,
-        github_link: '',
-        live_demo_link: '',
-    },
 ]

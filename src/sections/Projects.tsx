@@ -73,13 +73,23 @@ const Projects = () => {
                                 layout
                                 transition={{ duration: 0.5, ease: 'easeInOut' }}
                                 className={clsx(
-                                    'absolute transition-all duration-500 rounded-xl flex overflow-hidden',
+                                    'absolute transition-all duration-500 rounded-xl flex',
                                     positions[pos]
                                 )}
                                 onMouseOver={() => setIsHovering(true)}
                                 onMouseOut={() => setIsHovering(false)}
                             >
-                                <ProjectCard title={card.title} />
+                                <div className={clsx('w-18 h-18 rounded-full absolute left-1/2 -translate-x-1/2 -top-8 bg-background border-4 flex justify-center items-center',
+                                    pos === 'current' && 'border-cards-dark',
+                                    pos !== 'current' && 'border-cards-dark-inactive'
+                                )}>
+                                    <div className='p-4'>
+                                        {card.icon}
+                                    </div>
+                                </div>
+                                <ProjectCard
+                                    title={card.title}
+                                />
                             </motion.div>
                         )
                     })
