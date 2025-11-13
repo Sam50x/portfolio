@@ -5,9 +5,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 import nextArrow from '../assets/icons/nextArrow.svg'
 import prevArrow from '../assets/icons/prevArrow.svg'
 import ProjectCard from '../components/ProjectCard'
-import { projects } from '../data'
 
-type Position = 'none' | 'beforePrev' | 'prev' | 'current' | 'next' | 'afterNext'
+import type { Position } from '../types'
+import { projects } from '../data'
+import { positions } from '../data'
 
 const Projects = () => {
     const [currentIndex, setCurrentIndex] = useState<number>(0)
@@ -43,15 +44,6 @@ const Projects = () => {
         return () => clearInterval(interval)
     }, [isAnimating, isHovering])
 
-    const positions = {
-        none: 'w-0 h-0 hidden',
-        beforePrev: 'bg-cards-dark-inactive scale-50 -rotate-10 z-0 -translate-y-40 -translate-x-3000 md:scale-70 md:translate-y-0 lg:rotate-0 lg:scale-80 opacity-0 h-0 w-none',
-        prev: 'bg-cards-dark-inactive scale-50 -rotate-10 z-1 -translate-y-40 -translate-x-30 md:scale-70 md:translate-y-0 md:-translate-x-50 lg:rotate-0 lg:-translate-x-75 lg:scale-80 h-106 w-70',
-        current: 'bg-cards-dark lg:scale-110 z-2 h-106 w-70',
-        next: 'bg-cards-dark-inactive scale-50 rotate-10 z-1 -translate-y-40 translate-x-30 md:scale-70 md:translate-y-0 md:translate-x-50 lg:rotate-0 lg:translate-x-75 lg:scale-80 h-106 w-70',
-        afterNext: 'bg-cards-dark-inactive scale-50 rotate-10 z-0 -translate-y-40 translate-x-3000 md:scale-70 md:translate-y-0 lg:rotate-0 lg:scale-80 opacity-0 h-0 w-none',
-    }
-
     return (
         <section className="w-full min-h-screen flex flex-col justify-start items-center">
             <h4 className="mt-8 text-text text-md">Projects</h4>
@@ -79,16 +71,20 @@ const Projects = () => {
                                 onMouseOver={() => setIsHovering(true)}
                                 onMouseOut={() => setIsHovering(false)}
                             >
-                                <div className={clsx('w-18 h-18 rounded-full absolute left-1/2 -translate-x-1/2 -top-8 bg-background border-4 flex justify-center items-center',
+                                <div className={clsx('w-16 h-16 rounded-full absolute left-1/2 -translate-x-1/2 -top-7 bg-background border-4 flex justify-center items-center',
                                     pos === 'current' && 'border-cards-dark',
                                     pos !== 'current' && 'border-cards-dark-inactive'
                                 )}>
-                                    <div className='p-4'>
+                                    <div className='w-5/12 object-cover'>
                                         {card.icon}
                                     </div>
                                 </div>
                                 <ProjectCard
                                     title={card.title}
+                                    description={card.description}
+                                    date={card.date}
+                                    github_link={card.github_link}
+                                    live_demo_link={card.live_demo_link}
                                 />
                             </motion.div>
                         )

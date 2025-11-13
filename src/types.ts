@@ -6,3 +6,5 @@ export type Project = {
     github_link?: string,
     live_demo_link?: string,
 }
+
+export type Position = 'none' | 'beforePrev' | 'prev' | 'current' | 'next' | 'afterNext'
