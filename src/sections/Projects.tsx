@@ -75,7 +75,7 @@ const Projects = () => {
                                     pos === 'current' && 'border-cards-dark',
                                     pos !== 'current' && 'border-cards-dark-inactive'
                                 )}>
-                                    <div className='w-5/12 object-cover'>
+                                    <div className='w-1/2 flex justify-center items-center'>
                                         {card.icon}
                                     </div>
                                 </div>
