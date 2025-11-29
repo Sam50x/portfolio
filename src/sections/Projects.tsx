@@ -45,7 +45,7 @@ const Projects = () => {
     }, [isAnimating, isHovering])
 
     return (
-        <section className="w-full min-h-screen flex flex-col justify-start items-center">
+        <section id='projects' className="w-full h-dvh flex flex-col justify-start items-center">
             <h4 className="mt-8 text-text text-md">Projects</h4>
             <div id="cards" className="w-full flex justify-center items-center flex-1 overflow-hidden relative">
                 <AnimatePresence>

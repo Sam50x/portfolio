@@ -16,3 +16,7 @@
   font-family: gugi;
   src: url("./assets/fonts/Gugi-Regular.ttf");
 }
+
+html{
+  scroll-behavior: smooth;
+}
