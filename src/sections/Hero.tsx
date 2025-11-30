@@ -53,6 +53,7 @@ const Hero = () => {
                     </a>
                 </div>
 
+                {/* Scroll */}
                 <motion.a href="#about"
                     className="absolute w-full flex flex-col justify-center items-center gap-2"
                     initial={{ bottom: 20 }}
