@@ -2,13 +2,12 @@ import clsx from 'clsx'
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-import nextArrow from '../assets/icons/nextArrow.svg'
-import prevArrow from '../assets/icons/prevArrow.svg'
 import ProjectCard from '../components/ProjectCard'
 
 import type { Position } from '../types'
 import { projects } from '../data'
 import { positions } from '../data'
+import PrevandNextBtns from '../components/PrevandNextBtns'
 
 const Projects = () => {
     const [currentIndex, setCurrentIndex] = useState<number>(0)
@@ -45,7 +44,7 @@ const Projects = () => {
     }, [isAnimating, isHovering])
 
     return (
-        <section id='projects' className="w-full h-dvh flex flex-col justify-start items-center">
+        <section id='projects' className="w-full min-h-screen flex flex-col justify-start items-center">
             <h4 className="mt-8 text-text text-md">Projects</h4>
             <div id="cards" className="w-full flex justify-center items-center flex-1 overflow-hidden relative">
                 <AnimatePresence>
@@ -92,20 +91,7 @@ const Projects = () => {
                     }
                 </AnimatePresence>
             </div>
-            <div className='mb-8 flex flex-row justify-center items-center'>
-                <button
-                    onClick={handleGetPrev}
-                    className='cursor-pointer'
-                >
-                    <img src={prevArrow} alt="previous arrow" />
-                </button>
-                <button
-                    onClick={handleGetNext}
-                    className='cursor-pointer'
-                >
-                    <img src={nextArrow} alt="next arrow" />
-                </button>
-            </div>
+            <PrevandNextBtns prevAction={handleGetPrev} nextAction={handleGetNext}/>
         </section>
     )
 }

@@ -72,7 +72,7 @@ export const projects: Project[] = [
 
         Tools: Next.js, AWS, TailwindCSS, TypeScript, and Vercel.`,
         date: 'May 2025',
-        icon: <img src={filelockdownProjectIcon} alt="X-Pense" />,
+        icon: <img src={filelockdownProjectIcon} alt="File Lockdown" />,
         github_link: 'https://github.com/Sam50x/cloud-project',
     },
 ]
