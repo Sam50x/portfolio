@@ -1,5 +1,9 @@
 import RowScrollContainer from "../components/RowScrollContainer"
 
+import Image1 from '../assets/images/image-1.jpg'
+import Image2 from '../assets/images/image-2.jpeg'
+import Image3 from '../assets/images/image-3.jpg'
+
 const About = () => {
     return (
         <section id='about' className="w-full h-screen flex flex-col justify-start items-center pb-0.5">
@@ -15,8 +19,34 @@ const About = () => {
             </div>
 
             {/* Content */}
-            <div className="flex-1 h-full w-full">
+            <div className="h-full w-full flex justify-between items-start flex-col py-12 px-8">
+                {/* Images */}
+                <div className="flex flex-row justify-center items-center flex-nowrap gap-6 overflow-hidden w-full">
+                    <img
+                        src={Image1}
+                        alt="image 1"
+                        className="w-full max-w-64 xl:max-w-70 aspect-square rounded-xl border border-text text-text object-cover"
+                    />
+                    <img
+                        src={Image2}
+                        alt="image 2"
+                        className="w-full max-w-64 xl:max-w-70 aspect-square rounded-xl border border-text text-text object-cover hidden sm:block"
+                    />
+                    <img
+                        src={Image3}
+                        alt="image 3"
+                        className="w-full max-w-64 xl:max-w-70 aspect-square rounded-xl border border-text text-text object-cover hidden lg:block"
+                    />
+                </div>
 
+                {/* Text */}
+                <div className="flex flex-col justify-start items-center w-full gap-4">
+                    <h2 className="text-text text-4xl">Taking the industry for granted</h2>
+                    <p className="text-text whitespace-pre-line w-full max-w-120">
+                        {`I just believe that with enough focus and discipline, you can reach wherever you want — and beyond.
+                        Working hard isn't optional; it's how I'm earning what I want.`}
+                    </p>
+                </div>
             </div>
 
             {/* Bottom Row */}
