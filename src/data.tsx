@@ -1,4 +1,4 @@
-import type { Project } from "./types";
+import type { Experience, Project } from "./types";
 
 import lenzezProjectIcon from './assets/icons/lenzezProject.svg'
 import xpenseProjectIcon from './assets/icons/xpenseProject.svg'
@@ -27,7 +27,7 @@ export const projects: Project[] = [
         Sputnik is a startup that delivers space-themed learning experiences to nurseries and schools.
 
         Tools: Node.js, express.js, prisma, PostgreSQL, neon, and Notion API.`,
-        date: 'July 2025 - ongoing',
+        date: 'July 2025 - November 2025',
         icon: <img src={sputnikProjectIcon} alt="Sputnik" />,
     },
     {
@@ -74,6 +74,17 @@ export const projects: Project[] = [
         date: 'May 2025',
         icon: <img src={filelockdownProjectIcon} alt="File Lockdown" />,
         github_link: 'https://github.com/Sam50x/cloud-project',
+    },
+]
+
+export const experiences: Experience[] = [
+    {
+        title: 'Backend Engineer',
+        company: 'Sputnik',
+        location: 'Alexandria - Egypt',
+        date: 'July 2025 - November 2025',
+        description: ``,
+        icon: <img src={sputnikProjectIcon} alt='Sputnik' />
     },
 ]
 
