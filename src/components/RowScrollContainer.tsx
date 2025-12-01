@@ -21,11 +21,19 @@ const RowScrollContainer = ({ mode, background }: props) => {
 
     const contentRef = useRef<HTMLDivElement>(null)
 
+    const [lastWidth, setLastWidth] = useState<number>(0)
     const [shift, setShift] = useState<number>(0)
     const [motionKey, setMotionKey] = useState<number>(0)
 
     useLayoutEffect(() => {
         const calculateWidth = () => {
+
+            if (window.innerWidth == lastWidth){
+                return
+            }
+            
+            setLastWidth(window.innerWidth)
+
             if (contentRef.current) {
                 const contentWidth = contentRef.current.scrollWidth
 
@@ -40,7 +48,7 @@ const RowScrollContainer = ({ mode, background }: props) => {
 
         window.addEventListener('resize', calculateWidth)
         return () => window.removeEventListener('resize', calculateWidth)
-    }, [])
+    }, [lastWidth])
 
     return (
         <div
