@@ -19,7 +19,7 @@ const About = () => {
             </div>
 
             {/* Content */}
-            <div className="h-full w-full flex justify-between items-start flex-col py-12 px-8">
+            <div className="h-full w-full flex justify-between items-start flex-col md:py-12 sm:py-8 py-4 px-8">
                 {/* Images */}
                 <div className="flex flex-row justify-center items-center flex-nowrap gap-6 overflow-hidden w-full">
                     <img
