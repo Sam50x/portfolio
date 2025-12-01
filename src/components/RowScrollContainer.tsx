@@ -1,5 +1,6 @@
 import clsx from "clsx"
 import { motion } from 'framer-motion'
+import { useLayoutEffect, useRef, useState } from "react"
 
 type props = {
     mode: {
@@ -18,12 +19,42 @@ const RowScrollContainer = ({ mode, background }: props) => {
         title
     } = mode ?? null
 
+    const contentRef = useRef<HTMLDivElement>(null)
+
+    const [shift, setShift] = useState<number>(0)
+    const [motionKey, setMotionKey] = useState<number>(0)
+
+    useLayoutEffect(() => {
+        const calculateWidth = () => {
+            if (contentRef.current) {
+                const contentWidth = contentRef.current.scrollWidth
+
+                const finalX = 0 - (contentWidth * 1.2)
+
+                setShift(finalX | 0)
+                setMotionKey(prev => prev + 1)
+            }
+        }
+
+        calculateWidth()
+
+        window.addEventListener('resize', calculateWidth)
+        return () => window.removeEventListener('resize', calculateWidth)
+    }, [])
+
     return (
-        <div className={clsx("w-full h-20 border-t-5 border-b-5 border-text",
-            background === 'dark' ? 'bg-background' : 'bg-text'
-        )}>
+        <div
+            className={clsx("w-full h-20 border-t-5 border-b-5 border-text",
+                background === 'dark' ? 'bg-background' : 'bg-text'
+            )}>
             {name === 'data' ? (
-                <motion.div className="h-full flex flex-row justify-start items-center gap-16 px-3"
+                <motion.div
+                    className="h-full flex flex-row justify-start items-center gap-16"
+                    ref={contentRef}
+                    key={motionKey}
+                    initial={{ x: '100%' }}
+                    animate={{ x: shift }}
+                    transition={{ repeat: Infinity, duration: data?.length ? data?.length * 5 : 40, delay: 2, ease: 'linear' }}
                 >
                     {data && data.map((string, i) => {
                         return (
