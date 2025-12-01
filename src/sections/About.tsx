@@ -40,7 +40,7 @@ const About = () => {
                 </div>
 
                 {/* Text */}
-                <div className="flex flex-col justify-start items-center w-full gap-4">
+                <div className="flex flex-col justify-start items-center w-full gap-4 mt-12 mb-auto">
                     <h2 className="text-text text-4xl">Taking the industry for granted</h2>
                     <p className="text-text whitespace-pre-line w-full max-w-120">
                         {`I just believe that with enough focus and discipline, you can reach wherever you want — and beyond.
