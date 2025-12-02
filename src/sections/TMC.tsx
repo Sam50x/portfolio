@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import PrevandNextBtns from '../components/PrevandNextBtns'
 import { designs } from '../data'
-import { motion } from 'framer-motion'
 
 const TMC = () => {
 
@@ -12,14 +11,14 @@ const TMC = () => {
         if (currentIndex === designs.length - 1 || isAnimating) return
         setIsAnimating(true)
         setCurrentIndex(prev => prev + 1)
-        setTimeout(() => setIsAnimating(false), 1000)
+        setTimeout(() => setIsAnimating(false), 500)
     }
 
     const handleGetPrev = () => {
         if (currentIndex === 0 || isAnimating) return
         setIsAnimating(true)
         setCurrentIndex(prev => prev - 1)
-        setTimeout(() => setIsAnimating(false), 1000)
+        setTimeout(() => setIsAnimating(false), 500)
     }
 
     useEffect(() => {
@@ -28,7 +27,7 @@ const TMC = () => {
                 setCurrentIndex(prev => {
                     if (prev === designs.length - 1) return 0
                     setIsAnimating(true)
-                    setTimeout(() => setIsAnimating(false), 1000)
+                    setTimeout(() => setIsAnimating(false), 500)
                     return prev + 1
                 })
             }
@@ -48,11 +47,8 @@ const TMC = () => {
                 <div
                     className='w-86 md:w-92 lg:w-100 aspect-945/755'
                 >
-                    <motion.img src={designs[currentIndex]} alt='TMC design'
+                    <img src={designs[currentIndex]} alt='TMC design'
                         className='w-full object-cover transition-all duration-300'
-                        key={currentIndex}
-                        animate={{ opacity: [0, 100] }}
-                        transition={{ duration: 2 }}
                     />
                 </div>
                 <PrevandNextBtns
