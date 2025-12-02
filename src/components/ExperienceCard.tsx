@@ -14,7 +14,7 @@ const ExperienceCard = ({ title, company, location, description, date }: Partial
                     {date}
                 </h1>
             </div>
-            <div className="mt-8 flex-1 h-63">
+            <div className="mt-4 flex-1 h-73">
                 <p className="text-text text-[13.5px]">
                     {description}
                 </p>

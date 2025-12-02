@@ -79,12 +79,40 @@ export const projects: Project[] = [
 
 export const experiences: Experience[] = [
     {
+        title: 'Machine Learning Trainee',
+        company: 'DEPI',
+        location: 'Online - Alexandria - Egypt',
+        date: 'November 2025 - ongoing',
+        description: `In the Machine Learning Track with DEPI I am gaining hands on practice on building and training AI/ML systems, deploying AI with cloud technologies, and the soft skills needed for career success.
+
+        Topics: Machine Learning, Neural Networks, NLP, Computer Vision, Azure, and MLOps`,
+        icon: <img src={sputnikProjectIcon} alt='Sputnik' />
+    },
+    {
         title: 'Backend Engineer',
         company: 'Sputnik',
         location: 'Alexandria - Egypt',
         date: 'July 2025 - November 2025',
-        description: ``,
+        description: `Was Responsible for the backend infrastructure of the ERP system that was being built.
+
+        - Designed the whole database system, which was a mix of 2 different databases.
+        - Built most of the API endpoints interacting with the database.
+        - Wrote Documentation for most of the steps taken, which is something really normal.
+
+        Tools: Node.js, Express.js, Prisma, PostgreSQL, NotionAPI, and APIdog.`,
         icon: <img src={sputnikProjectIcon} alt='Sputnik' />
+    },
+    {
+        title: 'IoT Trainee',
+        company: 'Alexandria University',
+        location: 'Alexandria - Egypt',
+        date: 'July 2025 - August 2025',
+        description: `In the IoT training in Alexandria University I gained hands on practice on building IoT devices, programming them, connecting them, and linking them with cloud services and dashboard applications.
+        
+        The Smart Radar project was created for this training, which was graded with 100%.
+        
+        Tools: ESP32 toolkit, C, HiveMQ, and Supabase`,
+        icon: <img src={iotProjectIcon} alt='Sputnik' />
     },
 ]
 
