@@ -28,7 +28,7 @@ const Skills = () => {
     })
 
     return (
-        <section id='skills' className="w-full h-screen flex flex-col justify-start items-center pb-0.5"
+        <section id='skills' className="w-full h-screen min-h-[700px] flex flex-col justify-start items-center pb-0.5"
             onDoubleClick={deactivateAnimation}
         >
             <h4 className="mt-8 text-text text-md">Skills</h4>
