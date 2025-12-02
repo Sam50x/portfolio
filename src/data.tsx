@@ -1,4 +1,4 @@
-import type { Experience, Project } from "./types";
+import type { Experience, Project, Skill } from "./types";
 
 import lenzezProjectIcon from './assets/icons/lenzezProject.svg'
 import xpenseProjectIcon from './assets/icons/xpenseProject.svg'
@@ -113,6 +113,41 @@ export const experiences: Experience[] = [
         
         Tools: ESP32 toolkit, C, HiveMQ, and Supabase`,
         icon: <img src={iotProjectIcon} alt='Sputnik' />
+    },
+]
+
+export const skills: Skill[] = [
+    {
+        title: 'Frontend',
+        tools: ['React', 'TypeScript', 'Next.js', 'TailwindCSS', 'Figma', 'React Native', 'Expo.io']
+    },
+    {
+        title: 'Backend',
+        tools: ['Node.js', 'Express.js', 'Nest.js', 'PostgreSQL', 'Prisma', 'mongoose', 'Supabase', 'APIdog']
+    },
+    {
+        title: 'Mobile',
+        tools: ['React', 'React Native', 'Expo.io', 'EAS build']
+    },
+    {
+        title: 'Software Engineering',
+        tools: ['React', 'TypeScript', 'Next.js', 'TailwindCSS', 'Figma', 'React Native', 'Expo.io', 'EAS build', 'Node.js', 'Express.js', 'Nest.js', 'PostgreSQL', 'Prisma', 'mongoose', 'Supabase', 'APIdog']
+    },
+    {
+        title: 'Machine Learning',
+        tools: ['python', 'tensorflow', 'pytorch', 'scikit-learn', 'MLOps']
+    },
+    {
+        title: 'Data Science',
+        tools: ['python', 'Power bi', 'tensorflow', 'pytorch', 'scikit-learn', 'pandas', 'numpy', 'matplotlib', 'seaborn', 'streamlit']
+    },
+    {
+        title: 'Soft Skills',
+        tools: ['A good team player', 'disciplined and hard working', 'creativity', 'always seeking to learn and improve']
+    },
+    {
+        title: 'All',
+        tools: ['React', 'TypeScript', 'Next.js', 'TailwindCSS', 'Figma', 'React Native', 'Expo.io', 'EAS build', 'Node.js', 'Express.js', 'Nest.js', 'PostgreSQL', 'Prisma', 'mongoose', 'Supabase', 'APIdog', 'python', 'Power bi', 'tensorflow', 'pytorch', 'scikit-learn', 'pandas', 'numpy', 'matplotlib', 'seaborn', 'streamlit', 'A good team player', 'disciplined and hard working', 'creativity', 'always seeking to learn and improve']
     },
 ]
 

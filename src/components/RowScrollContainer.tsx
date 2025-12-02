@@ -1,23 +1,11 @@
-import clsx from "clsx"
 import { motion } from 'framer-motion'
 import { useLayoutEffect, useRef, useState } from "react"
 
 type props = {
-    mode: {
-        name: 'title' | 'data'
-        data?: string[]
-        title?: string
-    }
-    background: 'dark' | 'light'
+    data: string[]
 }
 
-const RowScrollContainer = ({ mode, background }: props) => {
-
-    const {
-        name,
-        data,
-        title
-    } = mode ?? null
+const RowScrollContainer = ({ data }: props) => {
 
     const contentRef = useRef<HTMLDivElement>(null)
 
@@ -28,10 +16,10 @@ const RowScrollContainer = ({ mode, background }: props) => {
     useLayoutEffect(() => {
         const calculateWidth = () => {
 
-            if (window.innerWidth == lastWidth){
+            if (window.innerWidth == lastWidth) {
                 return
             }
-            
+
             setLastWidth(window.innerWidth)
 
             if (contentRef.current) {
@@ -51,31 +39,25 @@ const RowScrollContainer = ({ mode, background }: props) => {
     }, [lastWidth])
 
     return (
-        <div
-            className={clsx("w-full h-20 border-t-5 border-b-5 border-text",
-                background === 'dark' ? 'bg-background' : 'bg-text'
-            )}>
-            {name === 'data' ? (
+        <div className="w-screen">
+            <div
+                className="w-full h-20 border-t-5 border-b-5 border-text bg-background">
                 <motion.div
                     className="h-full flex flex-row justify-start items-center gap-16"
                     ref={contentRef}
                     key={motionKey}
                     initial={{ x: '100%' }}
                     animate={{ x: shift }}
-                    transition={{ repeat: Infinity, duration: data?.length ? data?.length * 5 : 40, delay: 2, ease: 'linear' }}
+                    transition={{ repeat: Infinity, duration: data.length * 5, delay: 2, ease: 'linear' }}
                 >
-                    {data && data.map((string, i) => {
+                    {data.map((string, i) => {
                         return (
-                            <h1 key={i} className="whitespace-nowrap text-[22px] text-text lowercase">{string}</h1>
+                            <h1 key={i} className="whitespace-nowrap text-[22px] lowercase text-text">
+                                {string}</h1>
                         )
                     })}
                 </motion.div>
-            ) : (
-                <div className="flex justify-center items-center w-full h-full">
-                    <h1 className="w-full text-center text-3xl text-text lowercase">{title && title}</h1>
-                </div>
-            )}
-
+            </div>
         </div>
     )
 }

@@ -5,18 +5,15 @@ import Image2 from '../assets/images/image-2.jpeg'
 import Image3 from '../assets/images/image-3.jpg'
 
 const About = () => {
+
+    const aboutData = ['Shaping the future', 'building cool shit', 'Gimme your money', 'letting them ideas out', 'seif is the name', 'having fun building this', 'not that much of fun actually', 'achieving my goals', 'trying the impossible', 'are really watching this right now?', 'don\'t you have something better to do?', 'like calling me for example']
+
     return (
         <section id='about' className="w-full h-screen flex flex-col justify-start items-center pb-0.5">
             {/* Top Row */}
-            <div className="w-screen">
                 <RowScrollContainer
-                    background="dark"
-                    mode={{
-                        name: 'data',
-                        data: ['Shaping the future', 'building cool shit', 'Gimme your money', 'letting them ideas out', 'seif is the name', 'having fun building this', 'not that much of fun actually', 'achieving my goals', 'trying the impossible', 'are really watching this right now?', 'don\'t you have something better to do?', 'like calling me right now']
-                    }}
+                    data={aboutData}
                 />
-            </div>
 
             {/* Content */}
             <div className="h-full w-full flex justify-between items-start flex-col md:py-12 sm:py-8 py-4 px-8">
@@ -50,15 +47,9 @@ const About = () => {
             </div>
 
             {/* Bottom Row */}
-            <div className="w-screen">
                 <RowScrollContainer
-                    background="dark"
-                    mode={{
-                        name: 'data',
-                        data: ['Shaping the future', 'building cool shit', 'Gimme your money', 'letting them ideas out', 'seif is the name', 'having fun building this', 'not that much of fun actually', 'achieving my goals', 'trying the impossible', 'are really watching this right now?', 'don\'t you have something better to do?', 'like calling me for example']
-                    }}
+                    data={aboutData}
                 />
-            </div>
         </section>
     )
 }

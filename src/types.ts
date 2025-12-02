@@ -16,4 +16,9 @@ export type Experience = {
     icon: React.ReactNode,
 }
 
+export type Skill = {
+    title: string,
+    tools: string[]
+}
+
 export type Position = 'none' | 'beforePrev' | 'prev' | 'current' | 'next' | 'afterNext'
