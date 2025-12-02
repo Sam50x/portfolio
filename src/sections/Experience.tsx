@@ -2,20 +2,20 @@ import clsx from 'clsx'
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-import ProjectCard from '../components/ProjectCard'
+import ExperienceCard from '../components/ExperienceCard'
 
 import type { Position } from '../types'
-import { projects } from '../data'
+import { experiences } from '../data'
 import { positions } from '../data'
 import PrevandNextBtns from '../components/PrevandNextBtns'
 
-const Projects = () => {
+const Experience = () => {
     const [currentIndex, setCurrentIndex] = useState<number>(0)
     const [isAnimating, setIsAnimating] = useState<boolean>(false)
     const [isHovering, setIsHovering] = useState<boolean>(false)
 
     const handleGetNext = () => {
-        if (currentIndex === projects.length - 1 || isAnimating) return
+        if (currentIndex === experiences.length - 1 || isAnimating) return
         setIsAnimating(true)
         setCurrentIndex(prev => prev + 1)
         setTimeout(() => setIsAnimating(false), 500)
@@ -32,7 +32,7 @@ const Projects = () => {
         const interval = setInterval(() => {
             if (!isAnimating && !isHovering) {
                 setCurrentIndex(prev => {
-                    if (prev === projects.length - 1) return 0
+                    if (prev === experiences.length - 1) return 0
                     setIsAnimating(true)
                     setTimeout(() => setIsAnimating(false), 500)
                     return prev + 1
@@ -44,11 +44,11 @@ const Projects = () => {
     }, [isAnimating, isHovering])
 
     return (
-        <section id='projects' className="w-full min-h-screen flex flex-col justify-start items-center pb-8">
-            <h4 className="mt-8 text-text text-md">Projects</h4>
+        <section id='experience' className="w-full min-h-screen flex flex-col justify-start items-center pb-8">
+            <h4 className="mt-8 text-text text-md">Experience</h4>
             <div id="cards" className="w-full flex justify-center items-center flex-1 overflow-hidden relative">
                 <AnimatePresence>
-                    {projects.map((card, i) => {
+                    {experiences.map((card, i) => {
                         if (i < 0 || i > 5) return null;
                         let pos: Position = 'none'
 
@@ -78,12 +78,12 @@ const Projects = () => {
                                         {card.icon}
                                     </div>
                                 </div>
-                                <ProjectCard
+                                <ExperienceCard
                                     title={card.title}
                                     description={card.description}
                                     date={card.date}
-                                    github_link={card.github_link}
-                                    live_demo_link={card.live_demo_link}
+                                    company={card.company}
+                                    location={card.location}
                                 />
                             </motion.div>
                         )
@@ -91,9 +91,9 @@ const Projects = () => {
                     }
                 </AnimatePresence>
             </div>
-            <PrevandNextBtns prevAction={handleGetPrev} nextAction={handleGetNext}/>
+            <PrevandNextBtns prevAction={handleGetPrev} nextAction={handleGetNext} />
         </section>
     )
 }
 
-export default Projects
+export default Experience

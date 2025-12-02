@@ -1,4 +1,4 @@
-import type { Project } from "./types";
+import type { Experience, Project, Skill } from "./types";
 
 import lenzezProjectIcon from './assets/icons/lenzezProject.svg'
 import xpenseProjectIcon from './assets/icons/xpenseProject.svg'
@@ -6,6 +6,17 @@ import sputnikProjectIcon from './assets/icons/sputnikProject.svg'
 import ontrackProjectIcon from './assets/icons/ontrackProject.svg'
 import filelockdownProjectIcon from './assets/icons/filelockdownProject.svg'
 import iotProjectIcon from './assets/icons/iotProject.svg'
+import RobotIcon from './assets/icons/robot.svg'
+import MLIcon from './assets/icons/machinelearning.svg'
+
+import D1 from './assets/images/D1.png'
+import D2 from './assets/images/D2.png'
+import D3 from './assets/images/D3.png'
+import D4 from './assets/images/D4.png'
+import D5 from './assets/images/D5.png'
+import D6 from './assets/images/D6.png'
+import D7 from './assets/images/D7.png'
+import D8 from './assets/images/D8.png'
 
 export const projects: Project[] = [
     {
@@ -27,7 +38,7 @@ export const projects: Project[] = [
         Sputnik is a startup that delivers space-themed learning experiences to nurseries and schools.
 
         Tools: Node.js, express.js, prisma, PostgreSQL, neon, and Notion API.`,
-        date: 'July 2025 - ongoing',
+        date: 'July 2025 - November 2025',
         icon: <img src={sputnikProjectIcon} alt="Sputnik" />,
     },
     {
@@ -72,9 +83,87 @@ export const projects: Project[] = [
 
         Tools: Next.js, AWS, TailwindCSS, TypeScript, and Vercel.`,
         date: 'May 2025',
-        icon: <img src={filelockdownProjectIcon} alt="X-Pense" />,
+        icon: <img src={filelockdownProjectIcon} alt="File Lockdown" />,
         github_link: 'https://github.com/Sam50x/cloud-project',
     },
+]
+
+export const experiences: Experience[] = [
+    {
+        title: 'Machine Learning Trainee',
+        company: 'DEPI',
+        location: 'Online - Alexandria - Egypt',
+        date: 'November 2025 - ongoing',
+        description: `In the Machine Learning Track with DEPI I am gaining hands on practice on building and training AI/ML systems, deploying AI with cloud technologies, and the soft skills needed for career success.
+
+        Topics: Machine Learning, Neural Networks, NLP, Computer Vision, Azure, and MLOps`,
+        icon: <img src={MLIcon} alt='Machine Learning' />
+    },
+    {
+        title: 'Backend Engineer',
+        company: 'Sputnik',
+        location: 'Alexandria - Egypt',
+        date: 'July 2025 - November 2025',
+        description: `Was Responsible for the backend infrastructure of the ERP system that was being built.
+
+        - Designed the whole database system, which was a mix of 2 different databases.
+        - Built most of the API endpoints interacting with the database.
+        - Wrote Documentation for most of the steps taken, which is something really normal.
+
+        Tools: Node.js, Express.js, Prisma, PostgreSQL, NotionAPI, and APIdog.`,
+        icon: <img src={sputnikProjectIcon} alt='Sputnik' />
+    },
+    {
+        title: 'IoT Trainee',
+        company: 'Alexandria University',
+        location: 'Alexandria - Egypt',
+        date: 'July 2025 - August 2025',
+        description: `In the IoT training in Alexandria University I gained hands on practice on building IoT devices, programming them, connecting them, and linking them with cloud services and dashboard applications.
+        
+        The Smart Radar project was created for this training, which was graded with 100%.
+        
+        Tools: ESP32 toolkit, C, HiveMQ, and Supabase`,
+        icon: <img src={RobotIcon} alt='iot' />
+    },
+]
+
+export const skills: Skill[] = [
+    {
+        title: 'Frontend',
+        tools: ['React', 'TypeScript', 'Next.js', 'TailwindCSS', 'Figma', 'React Native', 'Expo.io']
+    },
+    {
+        title: 'Backend',
+        tools: ['Node.js', 'Express.js', 'Nest.js', 'PostgreSQL', 'Prisma', 'mongoose', 'Supabase', 'APIdog']
+    },
+    {
+        title: 'Mobile',
+        tools: ['React', 'React Native', 'Expo.io', 'EAS build']
+    },
+    {
+        title: 'Software Engineering',
+        tools: ['React', 'TypeScript', 'Next.js', 'TailwindCSS', 'Figma', 'React Native', 'Expo.io', 'EAS build', 'Node.js', 'Express.js', 'Nest.js', 'PostgreSQL', 'Prisma', 'mongoose', 'Supabase', 'APIdog']
+    },
+    {
+        title: 'Machine Learning',
+        tools: ['python', 'tensorflow', 'pytorch', 'scikit-learn', 'MLOps']
+    },
+    {
+        title: 'Data Science',
+        tools: ['python', 'Power bi', 'tensorflow', 'pytorch', 'scikit-learn', 'pandas', 'numpy', 'matplotlib', 'seaborn', 'streamlit']
+    },
+    {
+        title: 'Soft Skills',
+        tools: ['A good team player', 'disciplined and hard working', 'creativity', 'always seeking to learn and improve']
+    },
+    {
+        title: 'All',
+        tools: ['React', 'TypeScript', 'Next.js', 'TailwindCSS', 'Figma', 'React Native', 'Expo.io', 'EAS build', 'Node.js', 'Express.js', 'Nest.js', 'PostgreSQL', 'Prisma', 'mongoose', 'Supabase', 'APIdog', 'python', 'Power bi', 'tensorflow', 'pytorch', 'scikit-learn', 'pandas', 'numpy', 'matplotlib', 'seaborn', 'streamlit', 'A good team player', 'disciplined and hard working', 'creativity', 'always seeking to learn and improve']
+    },
+]
+
+export const designs: string[] = [
+    D1, D2, D3, D4, D5, D6, D7, D8,
 ]
 
 export const positions = {
