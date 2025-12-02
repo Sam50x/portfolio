@@ -2,11 +2,22 @@ import { motion } from 'framer-motion'
 import { useLayoutEffect, useRef, useState } from "react"
 import type { Skill } from '../types'
 
-const SkillRow = ({ title, tools }: Skill) => {
+type props = {
+    skill: Skill,
+    activeIndex: number | null
+    actualIndex: number
+    setActiveIndex: (i: number) => void
+    deactivateAnimation: () => void
+}
+
+const SkillRow = ({ skill, actualIndex, activeIndex, setActiveIndex, deactivateAnimation }: props) => {
+
+    const {
+        title,
+        tools
+    } = skill
 
     const contentRef = useRef<HTMLDivElement>(null)
-
-    const [isHovering, setIsHovering] = useState<boolean>(false)
 
     const [lastWidth, setLastWidth] = useState<number>(0)
     const [shift, setShift] = useState<number>(0)
@@ -15,7 +26,7 @@ const SkillRow = ({ title, tools }: Skill) => {
     useLayoutEffect(() => {
         const calculateWidth = () => {
 
-            if (!isHovering){
+            if (activeIndex !== actualIndex) {
                 return
             }
 
@@ -39,14 +50,14 @@ const SkillRow = ({ title, tools }: Skill) => {
 
         window.addEventListener('resize', calculateWidth)
         return () => window.removeEventListener('resize', calculateWidth)
-    }, [lastWidth, isHovering])
+    }, [lastWidth, activeIndex, actualIndex])
 
     const handleHoverStart = () => {
-        setIsHovering(true)
+        setActiveIndex(actualIndex)
     }
 
     const handleHoverEnd = () => {
-        setIsHovering(false)
+        deactivateAnimation()
     }
 
     return (
@@ -56,8 +67,8 @@ const SkillRow = ({ title, tools }: Skill) => {
             onMouseLeave={handleHoverEnd}
         >
             <div
-                className={`w-full h-16 border-t-5 border-text ${isHovering ? 'bg-text' : 'bg-background'}`}>
-                {isHovering ? (
+                className={`w-full h-16 border-t-5 border-text ${actualIndex === activeIndex ? 'bg-text' : 'bg-background'}`}>
+                {actualIndex === activeIndex ? (
                     <motion.div
                         className="h-full flex flex-row justify-start items-center gap-16"
                         ref={contentRef}

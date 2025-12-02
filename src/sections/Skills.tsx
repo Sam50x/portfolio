@@ -1,14 +1,28 @@
+import { useState } from "react"
 import SkillRow from "../components/SkillRow"
 import { skills } from "../data"
 
 const Skills = () => {
 
+    const [activeIndex, setActiveIndex] = useState<number | null>(null)
+
+    const handleChangeIndex = (i: number) => {
+        setActiveIndex(i)
+    }
+
+    const deactivateAnimation = () => {
+        setActiveIndex(null)
+    }
+
     const skillsRows = skills.map((skill, i) => {
         return (
             <SkillRow
                 key={i}
-                title={skill.title}
-                tools={skill.tools}
+                skill={skill}
+                activeIndex={activeIndex}
+                actualIndex={i}
+                setActiveIndex={handleChangeIndex}
+                deactivateAnimation={deactivateAnimation}
             />
         )
     })
