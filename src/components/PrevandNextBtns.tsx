@@ -8,7 +8,7 @@ type props = {
 
 const PrevandNextBtns = ({ prevAction, nextAction }: props) => {
     return (
-        <div className='mb-8 flex flex-row justify-center items-center'>
+        <div className='flex flex-row justify-center items-center'>
             <button
                 onClick={prevAction}
                 className='cursor-pointer'
