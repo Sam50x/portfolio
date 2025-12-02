@@ -45,7 +45,7 @@ const TMC = () => {
             <div className="flex flex-col justify-start items-center w-full gap-4">
                 <h2 className="text-text">Hall of Fame</h2>
                 <div
-                    className='w-86 md:w-92 lg:w-100 aspect-945/755'
+                    className='w-86 md:w-92 lg:w-100 aspect-755/945 overflow-hidden'
                 >
                     <img src={designs[currentIndex]} alt='TMC design'
                         className='w-full object-cover transition-all duration-300'
