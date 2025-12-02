@@ -6,6 +6,8 @@ import sputnikProjectIcon from './assets/icons/sputnikProject.svg'
 import ontrackProjectIcon from './assets/icons/ontrackProject.svg'
 import filelockdownProjectIcon from './assets/icons/filelockdownProject.svg'
 import iotProjectIcon from './assets/icons/iotProject.svg'
+import RobotIcon from './assets/icons/robot.svg'
+import MLIcon from './assets/icons/machinelearning.svg'
 
 export const projects: Project[] = [
     {
@@ -86,7 +88,7 @@ export const experiences: Experience[] = [
         description: `In the Machine Learning Track with DEPI I am gaining hands on practice on building and training AI/ML systems, deploying AI with cloud technologies, and the soft skills needed for career success.
 
         Topics: Machine Learning, Neural Networks, NLP, Computer Vision, Azure, and MLOps`,
-        icon: <img src={sputnikProjectIcon} alt='Sputnik' />
+        icon: <img src={MLIcon} alt='Machine Learning' />
     },
     {
         title: 'Backend Engineer',
@@ -112,7 +114,7 @@ export const experiences: Experience[] = [
         The Smart Radar project was created for this training, which was graded with 100%.
         
         Tools: ESP32 toolkit, C, HiveMQ, and Supabase`,
-        icon: <img src={iotProjectIcon} alt='Sputnik' />
+        icon: <img src={RobotIcon} alt='iot' />
     },
 ]
 
