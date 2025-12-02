@@ -1,20 +1,41 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import PrevandNextBtns from '../components/PrevandNextBtns'
 import { designs } from '../data'
+import { motion } from 'framer-motion'
 
 const TMC = () => {
 
-    const [index, setIndex] = useState<number>(0)
+    const [currentIndex, setCurrentIndex] = useState<number>(0)
+    const [isAnimating, setIsAnimating] = useState<boolean>(false)
 
     const handleGetNext = () => {
-        if (index === designs.length - 1) return
-        setIndex(prev => prev + 1)
+        if (currentIndex === designs.length - 1 || isAnimating) return
+        setIsAnimating(true)
+        setCurrentIndex(prev => prev + 1)
+        setTimeout(() => setIsAnimating(false), 1000)
     }
 
     const handleGetPrev = () => {
-        if (index === 0) return
-        setIndex(prev => prev - 1)
+        if (currentIndex === 0 || isAnimating) return
+        setIsAnimating(true)
+        setCurrentIndex(prev => prev - 1)
+        setTimeout(() => setIsAnimating(false), 1000)
     }
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (!isAnimating) {
+                setCurrentIndex(prev => {
+                    if (prev === designs.length - 1) return 0
+                    setIsAnimating(true)
+                    setTimeout(() => setIsAnimating(false), 1000)
+                    return prev + 1
+                })
+            }
+        }, 10000)
+
+        return () => clearInterval(interval)
+    }, [isAnimating])
 
     return (
         <section id='tmc' className="w-full h-screen flex flex-col lg:flex-row justify-between items-start gap-2 lg:gap-8 py-4 md:py-8 lg:py-12">
@@ -24,9 +45,16 @@ const TMC = () => {
             </div>
             <div className="flex flex-col justify-start items-center w-full gap-4">
                 <h2 className="text-text">Hall of Fame</h2>
-                <img src={designs[index]} alt='TMC design'
-                    className='w-86 md:w-92 lg:w-100 object-cover-500'
-                />
+                <div
+                    className='w-86 md:w-92 lg:w-100 aspect-945/755'
+                >
+                    <motion.img src={designs[currentIndex]} alt='TMC design'
+                        className='w-full object-cover transition-all duration-300'
+                        key={currentIndex}
+                        animate={{ opacity: [0, 100] }}
+                        transition={{ duration: 2 }}
+                    />
+                </div>
                 <PrevandNextBtns
                     nextAction={handleGetNext}
                     prevAction={handleGetPrev}
