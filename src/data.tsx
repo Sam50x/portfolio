@@ -9,6 +9,15 @@ import iotProjectIcon from './assets/icons/iotProject.svg'
 import RobotIcon from './assets/icons/robot.svg'
 import MLIcon from './assets/icons/machinelearning.svg'
 
+import D1 from './assets/images/D1.png'
+import D2 from './assets/images/D2.png'
+import D3 from './assets/images/D3.png'
+import D4 from './assets/images/D4.png'
+import D5 from './assets/images/D5.png'
+import D6 from './assets/images/D6.png'
+import D7 from './assets/images/D7.png'
+import D8 from './assets/images/D8.png'
+
 export const projects: Project[] = [
     {
         title: 'Lenzez',
@@ -151,6 +160,10 @@ export const skills: Skill[] = [
         title: 'All',
         tools: ['React', 'TypeScript', 'Next.js', 'TailwindCSS', 'Figma', 'React Native', 'Expo.io', 'EAS build', 'Node.js', 'Express.js', 'Nest.js', 'PostgreSQL', 'Prisma', 'mongoose', 'Supabase', 'APIdog', 'python', 'Power bi', 'tensorflow', 'pytorch', 'scikit-learn', 'pandas', 'numpy', 'matplotlib', 'seaborn', 'streamlit', 'A good team player', 'disciplined and hard working', 'creativity', 'always seeking to learn and improve']
     },
+]
+
+export const designs: string[] = [
+    D1, D2, D3, D4, D5, D6, D7, D8,
 ]
 
 export const positions = {
