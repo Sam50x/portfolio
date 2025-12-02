@@ -9,7 +9,7 @@ const About = () => {
     const aboutData = ['Shaping the future', 'building cool shit', 'Gimme your money', 'letting them ideas out', 'seif is the name', 'having fun building this', 'not that much of fun actually', 'achieving my goals', 'trying the impossible', 'are really watching this right now?', 'don\'t you have something better to do?', 'like calling me for example']
 
     return (
-        <section id='about' className="w-full h-screen flex flex-col justify-start items-center pb-0.5">
+        <section id='about' className="w-full h-screen min-h-[700px] flex flex-col justify-start items-center pb-0.5">
             {/* Top Row */}
                 <RowScrollContainer
                     data={aboutData}

@@ -10,12 +10,12 @@ import HeroVideo from '../assets/videos/heroVideo.mp4'
 
 const Hero = () => {
     return (
-        <section id='hero' className="w-full h-screen flex flex-col justify-start items-center">
+        <section id='hero' className="w-full h-screen min-h-[700px] flex flex-col justify-start items-center">
             {/* Nav */}
             <Nav />
 
             {/* Video */}
-            <div className="w-full xl:px-25 lg:px-16 md:px-8 px-3 h-3/4 z-0 mt-32 absolute">
+            <div className="w-full xl:px-25 lg:px-16 md:px-8 px-3 h-3/4 min-h-[525px] z-0 mt-32 absolute">
                 <video
                     className="w-full h-full object-cover rounded-3xl"
                     src={HeroVideo}
@@ -26,7 +26,7 @@ const Hero = () => {
             </div>
 
             {/* Content */}
-            <div className="w-full xl:px-25 lg:px-16 md:px-8 px-3 h-3/4 z-10 mt-32 absolute flex flex-col justify-start items-center gap-2 py-24">
+            <div className="w-full xl:px-25 lg:px-16 md:px-8 px-3 h-3/4 min-h-[525px] z-10 mt-32 absolute flex flex-col justify-start items-center gap-2 py-24">
                 <h1 className="text-text text-4xl sm:text-5xl md:text-7xl text-center">Seif Adin Madkour</h1>
                 <p className="text-text text-xl sm:text-2xl text-center">a multi-disciplinary engineer</p>
                 <div className="flex flex-row justify-center items-center gap-8 w-full mt-6">
