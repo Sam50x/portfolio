@@ -4,6 +4,7 @@ import Projects from "./sections/Projects"
 import Experience from "./sections/Experience"
 import Skills from "./sections/Skills"
 import TMC from "./sections/TMC"
+import Footer from "./sections/Footer"
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Experience />
       <Skills />
       <TMC />
+      <Footer />
     </main>
   )
 }
