@@ -1,75 +1,19 @@
-# React + TypeScript + Vite
+# The Seif Adin Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Home page screenshot](src/assets/images/home.png)
 
-Currently, two official plugins are available:
+This project changed a lot for me, let me tell you how.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A few months ago, while I was building a certain project; I noticed that I had an issue when it came to the UI design part, so I tried to fix it.
 
-## React Compiler
+I started as usual by trying to find a course or a tutorial about ui design, but after jumping from one place to the other; I figured that ui design is better learnt by doing.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+I decided to design my own portfolio, which was an idea that I always tried to escape from, because I always thought about it as if it's supposed to be perfect, but I started anyway.
 
-Note: This will impact Vite dev & build performances.
+First I looked into a couple of portfolios, figured what I liked and what I didn't, and started designing it the way I liked, step by step until I got the look that I liked, then I started writing the code for it.
 
-## Expanding the ESLint configuration
+Now this is my portfolio; up and alive, and I am really proud of it, cause I didn't just identify a problem I had, didn't just solve it, but I did it the way I liked; that's why it means so much for me.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+You can see the live version here [Live](https://seif-adin-madkour.vercel.app)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+You can see the code here: [Github](https://github.com/Sam50x/portfolio)
