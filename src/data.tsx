@@ -8,23 +8,46 @@ import filelockdownProjectIcon from './assets/icons/filelockdownProject.svg'
 import iotProjectIcon from './assets/icons/iotProject.svg'
 import RobotIcon from './assets/icons/robot.svg'
 import MLIcon from './assets/icons/machinelearning.svg'
+import PlaneIcon from './assets/icons/plane.svg'
+import PortfolioIcon from './assets/icons/portfolio.svg'
 
-import D1 from './assets/images/D1.png'
-import D2 from './assets/images/D2.png'
-import D3 from './assets/images/D3.png'
-import D4 from './assets/images/D4.png'
-import D5 from './assets/images/D5.png'
-import D6 from './assets/images/D6.png'
-import D7 from './assets/images/D7.png'
-import D8 from './assets/images/D8.png'
+import D1 from './assets/images/D1.webp'
+import D2 from './assets/images/D2.webp'
+import D3 from './assets/images/D3.webp'
+import D4 from './assets/images/D4.webp'
+import D5 from './assets/images/D5.webp'
+import D6 from './assets/images/D6.webp'
+import D7 from './assets/images/D7.webp'
+import D8 from './assets/images/D8.webp'
+import D9 from './assets/images/D9.webp'
 
 export const projects: Project[] = [
     {
+        title: 'Lane Below',
+        description: `During my internship with Jaris Technologies I will be working on the Lane Below project.
+        
+        It's supposed to be an autonomous version of all the operations that happen on the lane of an airport.`,
+        date: 'December 2025 - ongoing',
+        icon: <img src={PlaneIcon} alt="lane below" />,
+    },
+    {
+        title: 'My Portfolio',
+        description: `I noticed that I had a problem with UI design, and I figured the best way to solve it is by doing.
+
+        I started designing my special portfolio, the way I liked it; simple, clean and f*cking awesome.
+
+        Tools: React, TailwindCSS, TypeScript, Figma, and Vercel.`,
+        date: 'November 2025 - December 2025',
+        icon: <img src={PortfolioIcon} alt="Portfolio" />,
+        github_link: 'https://github.com/Sam50x/portfolio',
+        live_demo_link: 'https://seif-adin-madkour.vercel.app',
+    },
+    {
         title: 'Lenzez',
         description: `An AI-Powered Photo Editor, where you choose the service you wish, upload your photo, then watch the magic happens.
-        
+
         From removing or replacing a background, through generative-fill, all the way to enhancing quality.
-        
+
         Tools: Next.js, Supabase, TailwindCSS, TypeScript, Cloudinary AI, and Vercel.`,
         date: 'July 2025',
         icon: <img src={lenzezProjectIcon} alt="Lenzez" />,
@@ -90,6 +113,16 @@ export const projects: Project[] = [
 
 export const experiences: Experience[] = [
     {
+        title: 'R&D Intern',
+        company: 'Jaris',
+        location: 'Remote - France',
+        date: 'December 2025 - ongoing',
+        description: `During this international internship; I am gaining experience in applied artificial intelligence, systems design, and emerging digital automation technologies.
+        
+        currently working on the Lane Below project.`,
+        icon: <img src={PlaneIcon} alt='plane' />
+    },
+    {
         title: 'Machine Learning Trainee',
         company: 'DEPI',
         location: 'Online - Alexandria - Egypt',
@@ -119,9 +152,9 @@ export const experiences: Experience[] = [
         location: 'Alexandria - Egypt',
         date: 'July 2025 - August 2025',
         description: `In the IoT training in Alexandria University I gained hands on practice on building IoT devices, programming them, connecting them, and linking them with cloud services and dashboard applications.
-        
+
         The Smart Radar project was created for this training, which was graded with 100%.
-        
+
         Tools: ESP32 toolkit, C, HiveMQ, and Supabase`,
         icon: <img src={RobotIcon} alt='iot' />
     },
@@ -163,7 +196,7 @@ export const skills: Skill[] = [
 ]
 
 export const designs: string[] = [
-    D1, D2, D3, D4, D5, D6, D7, D8,
+    D1, D2, D3, D4, D5, D6, D7, D8, D9,
 ]
 
 export const positions = {
