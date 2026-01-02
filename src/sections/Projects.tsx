@@ -49,7 +49,6 @@ const Projects = () => {
             <div id="cards" className="w-full flex justify-center items-center flex-1 overflow-hidden relative">
                 <AnimatePresence>
                     {projects.map((card, i) => {
-                        if (i < 0 || i > 5) return null;
                         let pos: Position = 'none'
 
                         if (i == currentIndex) pos = 'current'
