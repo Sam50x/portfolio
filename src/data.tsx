@@ -20,14 +20,17 @@ import D6 from './assets/images/D6.webp'
 import D7 from './assets/images/D7.webp'
 import D8 from './assets/images/D8.webp'
 import D9 from './assets/images/D9.webp'
+import D10 from './assets/images/D10.webp'
+import D11 from './assets/images/D11.webp'
+import D12 from './assets/images/D12.webp'
 
 export const projects: Project[] = [
     {
         title: 'Lane Below',
         description: `During my internship with Jaris Technologies I will be working on the Lane Below project.
         
-        It's supposed to be an autonomous version of all the operations that happen on the lane of an airport.`,
-        date: 'December 2025 - ongoing',
+        A full autonomous version of all the operations that happen on the lane of an airport.`,
+        date: 'December 2025 - February 2026',
         icon: <img src={PlaneIcon} alt="lane below" />,
     },
     {
@@ -116,7 +119,7 @@ export const experiences: Experience[] = [
         title: 'R&D Intern',
         company: 'Jaris',
         location: 'Remote - France',
-        date: 'December 2025 - ongoing',
+        date: 'December 2025 - February 2026',
         description: `During this international internship; I am gaining experience in applied artificial intelligence, systems design, and emerging digital automation technologies.
         
         currently working on the Lane Below project.`,
@@ -179,11 +182,11 @@ export const skills: Skill[] = [
     },
     {
         title: 'Machine Learning',
-        tools: ['python', 'tensorflow', 'pytorch', 'scikit-learn', 'MLOps']
+        tools: ['python', 'tensorflow', 'scikit-learn', 'MLOps']
     },
     {
         title: 'Data Science',
-        tools: ['python', 'Power bi', 'tensorflow', 'pytorch', 'scikit-learn', 'pandas', 'numpy', 'matplotlib', 'seaborn', 'streamlit']
+        tools: ['python', 'Power bi', 'tensorflow', 'scikit-learn', 'pandas', 'numpy', 'matplotlib', 'seaborn', 'streamlit']
     },
     {
         title: 'Soft Skills',
@@ -191,12 +194,12 @@ export const skills: Skill[] = [
     },
     {
         title: 'All',
-        tools: ['React', 'TypeScript', 'Next.js', 'TailwindCSS', 'Figma', 'React Native', 'Expo.io', 'EAS build', 'Node.js', 'Express.js', 'Nest.js', 'PostgreSQL', 'Prisma', 'mongoose', 'Supabase', 'APIdog', 'python', 'Power bi', 'tensorflow', 'pytorch', 'scikit-learn', 'pandas', 'numpy', 'matplotlib', 'seaborn', 'streamlit', 'A good team player', 'disciplined and hard working', 'creativity', 'always seeking to learn and improve']
+        tools: ['React', 'TypeScript', 'Next.js', 'TailwindCSS', 'Figma', 'React Native', 'Expo.io', 'EAS build', 'Node.js', 'Express.js', 'Nest.js', 'PostgreSQL', 'Prisma', 'mongoose', 'Supabase', 'APIdog', 'python', 'Power bi', 'tensorflow', 'scikit-learn', 'pandas', 'numpy', 'matplotlib', 'seaborn', 'streamlit', 'A good team player', 'disciplined and hard working', 'creativity', 'always seeking to learn and improve']
     },
 ]
 
 export const designs: string[] = [
-    D1, D2, D3, D4, D5, D6, D7, D8, D9,
+    D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12
 ]
 
 export const positions = {
