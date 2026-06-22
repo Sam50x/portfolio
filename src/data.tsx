@@ -26,12 +26,12 @@ import D12 from './assets/images/D12.webp'
 
 export const projects: Project[] = [
     {
-        title: 'Linear Regression',
-        description: `Built a Linear Regression model from scratch using Python and math, implementing gradient descent and multiple loss functions. Tested it against Scikit-learn on the Kaggle House Prices dataset, achieving an RMSE of 0.14 vs. 0.20. Part of a personal challenge to learn machine learning by building algorithms from the ground up.`,
-        date: 'June 2026',
+        title: 'ML from Scratch',
+        description: `Building a comprehensive library of core ML algorithms from mathematical primitives using only NumPy — covering regression (Linear Regression, Regularization, Logistic Regression, Auto Regression), tree-based methods (Decision Trees, Random Forests, Gradient Boosted Trees), unsupervised learning (PCA, K-Means, DBSCAN), and neural networks (MLP with backpropagation) — no high-level ML frameworks used.`,
+        date: 'June 2026 - Present',
         icon: <img src={MLIcon} alt="lane below" />,
-        github_link: 'https://github.com/Sam50x/Linear-Regression-from-Scratch',
-        live_demo_link: 'https://youtu.be/82rWXF8JZ48?si=NVn-7XK24aVHVLoC',
+        github_link: 'https://github.com/Sam50x/ML-from-Scratch',
+        live_demo_link: 'https://youtube.com/playlist?list=PLu3EHtBJ1azw3mVonttdaW_XKpWjCDniA&si=R6hpkdn9Yke50LZ7',
     },
     {
         title: 'Lane Below',
